@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>COMP 2132 - Project</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+        <link href="styles/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+        
+    </head>
+
+<body class="page-accordion">   
+    <div class="wrapper"> <!--wrapper div-->
+        <h2 class="box header">Comp 2132 - Dice Game</h2>
+            
+            <main>
+            <div class="box rules accordion">
+                <h3 class="tab">How to Play?</h3>
+                    <div class="readme">
+                        <ul>
+                            <li>To start, click the 'Roll Dice' button.</li>
+                            <li>To advance to the next round, click the'Roll Dice' button again.</li>
+                             <li>After 3 rounds, the game is over and final score is caculated.</li>
+                            <li>If you want to play again, click the'New Game'buyyon or refresh the page.</li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="box rules accordion">
+                <h3 class="tab">Rules:</h3>
+                <div class="readme">
+                    <ul>
+                        <li>Each round, you and the computer both roll a pair of dice.</li>
+                        <li>Your score for that round will be base on the sum of the dice.</li>
+                        <li>If you roll doubles(e.g. a 3 and a 3) then youe xcore is multiplied by 2.</li>
+                        <li>Rolling a 1 will give you a score of 0 for that round.</li>
+                        <li>The player who has the most points at the end of 3 rounds is the winner.</li>
+                    </ul>
+                </div>
+            </div>
+                
+            <div class="content">
+                <div class="box box1">
+                    <h3>Player</h3>
+                        <figure>
+                            <img src="images/1.png" id="pd1" alt="rolled:1">
+                            <img src="images/1.png" id="pd2" alt="rolled:1">
+                        </figure>
+                </div>
+                <div class="box box2">
+                    <h3>Computer</h3>
+                    <figure>
+                        <img src="images/1.png" id="cd1" alt="rolled:1">
+                        <img src="images/1.png" id="cd2" alt="rolled:1">
+                    </figure>
+                </div>
+                <div class="box roll">
+                    <button id="dice-roll" class="angled-gradient-button">Roll Dice!</button>
+                    <button id="new-game" class="angled-gradient-button">New Game!</button>
+                </div>
+                <div class="box pscore">
+                    <h3>Your Score</h3>
+                    <h4>This Round:</h4>
+                    <p id="pr"></p>
+                    <h4>Player Total:</h4>
+                    <p id="pTotal"></p>
+                </div>
+                <div class="box cscore">
+                    <h3>Computer's Score</h3>
+                    <h4>This Round:</h4>
+                    <p id="cr"></p>
+                    <h4>Computer Total:</h4>
+                    <p id="cTotal"></p>
+                </div>
+                <div class="box win-message">
+                    <p id="message"></p>
+                </div>
+            </main>
+
+            </div>
+    </div>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="scripts/script.js"></script>
+    
+    </body>
+</html>

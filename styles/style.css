@@ -1,0 +1,163 @@
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  
+  img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    background-color: #555552;
+    border: 1px double #d6c49e;
+    border-radius: 15px;
+  }
+
+  .page-accordion {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .wrapper {
+    background-color: #0d212c;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    color: #b36862;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: minmax(150px, auto);
+    grid-gap: 5px;
+    grid-template-areas: "header"
+   "rules"
+   "content";
+  }
+  
+  .accordion .tab {
+    background-color: #0d212c;
+    border-top: 1px solid #d6c49e;
+    border-bottom: 1px solid #d6c49e;
+    cursor: pointer;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  .header {
+    grid-area: header;
+    background-image: url("../images/dice.jpg");
+    background-repeat: repeat-x;
+    border:#d6c49e double;
+    text-align: center;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(200px, auto);
+    grid-gap: 2px;
+    grid-area: content;
+    grid-template-areas: "box1 box2"
+   "box1 box2"
+   "roll roll"
+   "pscore cscore"
+   "ptotal ctotal"
+   "win win";
+  }
+  
+  .rules {
+    list-style: circle inside;
+    padding: 0;
+    margin: 0;
+    grid-area: rules;
+  }
+  
+  .box1 {
+    grid-area: box1;
+  }
+  
+  .box2 {
+    grid-area: box2;
+  }
+  
+  .roll {
+    grid-area: roll;
+    align-items: center;
+  }
+  
+  .pscore {
+    grid-area: pscore;
+    border: #d6c49e solid;
+    margin: 20px auto;
+    width:60%;
+  }
+  
+  .cscore {
+    grid-area: cscore;
+    border: #d6c49e solid;
+    margin: 20px auto;
+    width: 60%;
+  }
+  
+  .ptotal {
+    grid-area: ptotal;
+    text-align: center;
+  }
+  
+  .ctotal {
+    grid-area: ctotal;
+    text-align: center;
+  }
+  
+  .win-message {
+    grid-area: win;
+    text-align: center;
+  }
+  
+  .angled-gradient-button {
+    background-size: 220%;
+    box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.15);
+    color: #a88478;
+    background-color: transparent;
+    background-position: 100%;
+    border: 3px dotted #d6c49e;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 3px;
+    transition: all .2s ease-out;
+    font-weight: 900;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-image: linear-gradient(110deg, #ddceae 0%, #ddceae 50%, transparent 50%, transparent 100%);
+    font-size: 14px;
+  }
+  
+  .angled-gradient-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.25);
+    background-position: 0;
+    color: #fff;
+  }
+  
+  .angled-gradient-button:active {
+    transform: translateY(-1px);
+  }
